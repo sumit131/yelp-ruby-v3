@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v2/phone_search/?category=localflavor&code=US&phone=%2B14159083801
+    uri: https://api.yelp.com/v3/phone_search/?category=localflavor&code=US&phone=%2B14159083801
     body:
       encoding: US-ASCII
       string: ''

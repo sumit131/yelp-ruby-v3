@@ -55,7 +55,7 @@ Yelp.client.search('San Francisco', { term: 'food' })
 
 After creating the client you're able to make requests to either the Search API or Business API. Note: all four keys are required for making requests against the Yelp API. If you need any keys sign up and get access from [http://www.yelp.com/developers](http://www.yelp.com/developers).
 
-### [Search API](http://www.yelp.com/developers/documentation/v2/search_api)
+### [Search API](http://www.yelp.com/developers/documentation/v3/search_api)
 
 Once you have a client you can use ``#search`` to make a request to the Search API.
 
@@ -76,9 +76,9 @@ locale = { lang: 'fr' }
 client.search('San Francisco', params, locale)
 ```
 
-Key names and options for params and locale match the documented names on the [Yelp Search API](http://www.yelp.com/developers/documentation/v2/search_api)
+Key names and options for params and locale match the documented names on the [Yelp Search API](http://www.yelp.com/developers/documentation/v3/search_api)
 
-Additionally there are two more search methods for searching by a [bounding box](http://www.yelp.com/developers/documentation/v2/search_api#searchGBB) or for [geographical coordinates](http://www.yelp.com/developers/documentation/v2/search_api#searchGC):
+Additionally there are two more search methods for searching by a [bounding box](http://www.yelp.com/developers/documentation/v3/search_api#searchGBB) or for [geographical coordinates](http://www.yelp.com/developers/documentation/v3/search_api#searchGC):
 
 ```
 # bounding box
@@ -90,7 +90,7 @@ coordinates = { latitude: 37.7577, longitude: -122.4376 }
 client.search_by_coordinates(coordinates, params, locale)
 ```
 
-### [Business API](http://www.yelp.com/developers/documentation/v2/business)
+### [Business API](http://www.yelp.com/developers/documentation/v3/business)
 
 To use the Business API after you have a client you just need to call ``#business`` with a business id
 
@@ -106,7 +106,7 @@ locale = { lang: 'fr' }
 client.business('yelp-san-francisco', locale)
 ```
 
-### [Phone Search API](http://www.yelp.com/developers/documentation/v2/phone_search)
+### [Phone Search API](http://www.yelp.com/developers/documentation/v3/phone_search)
 
 To use the Phone Search API after you have a client you just need to call ``#phone_search`` with a phone number
 
@@ -150,7 +150,7 @@ response.business.categories
 # [["Local Flavor", "localflavor"], ["Mass Media", "massmedia"]]
 ```
 
-For specific response values check out the docs for the [Search API](http://www.yelp.com/developers/documentation/v2/search_api#rValue) and the [Business API](http://www.yelp.com/developers/documentation/v2/business#rValue). You can also look at the responses and models inside of `lib/yelp/responses` and `lib/yelp/responses/models` to see the methods available.
+For specific response values check out the docs for the [Search API](http://www.yelp.com/developers/documentation/v3/search_api#rValue) and the [Business API](http://www.yelp.com/developers/documentation/v3/business#rValue). You can also look at the responses and models inside of `lib/yelp/responses` and `lib/yelp/responses/models` to see the methods available.
 
 ## Contributing
 

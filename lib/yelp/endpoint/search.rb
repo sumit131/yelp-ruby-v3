@@ -5,7 +5,7 @@ require 'yelp/responses/search'
 module Yelp
   module Endpoint
     class Search
-      PATH = '/v2/search'
+      PATH = '/v3/search'
 
       BOUNDING_BOX = [:sw_latitude, :sw_longitude, :ne_latitude, :ne_longitude]
       COORDINATES  = [:latitude, :longitude, :accuracy, :altitude, :altitude_accuracy]
@@ -20,12 +20,12 @@ module Yelp
       # @param location [String] a string location of the neighborhood,
       #   address, or city
       # @param params [Hash] a hash that corresponds to params on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#searchGP
+      #   http://www.yelp.com/developers/documentation/v3/search_api#searchGP
       # @param locale [Hash] a hash that corresponds to locale on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#lParam
+      #   http://www.yelp.com/developers/documentation/v3/search_api#lParam
       # @return [Response::Search] a parsed object of the response. For a complete
       #   list of possible response values visit:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#rValue
+      #   http://www.yelp.com/developers/documentation/v3/search_api#rValue
       #
       # @example Search for business with params and locale
       #   params = { term: 'food',
@@ -51,17 +51,17 @@ module Yelp
 
       # Search by a bounding box: specify a south west lat/long and a ne lat/long
       # along with regular parameters to make a request to the search endpoint
-      # More info at: http://www.yelp.com/developers/documentation/v2/search_api#searchGBB
+      # More info at: http://www.yelp.com/developers/documentation/v3/search_api#searchGBB
       #
       # @param bounding_box [Hash] a hash of SW latitude/longitude and NE latitude/longitude,
       #   all 4 keys are required to be set
       # @param params [Hash] a hash that corresponds to params on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#searchGP
+      #   http://www.yelp.com/developers/documentation/v3/search_api#searchGP
       # @param locale [Hash] a hash that corresponds to locale on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#lParam
+      #   http://www.yelp.com/developers/documentation/v3/search_api#lParam
       # @return [Response::Search] a parsed object of the response. For a complete
       #   list of possible response values visit:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#rValue
+      #   http://www.yelp.com/developers/documentation/v3/search_api#rValue
       #
       # @example Search for business with params and locale
       #   bounding_box = { sw_latitude: 37.785855, sw_longitude: -122.405780,
@@ -97,17 +97,17 @@ module Yelp
 
       # Search by coordinates: give it a latitude and longitude along with
       # option accuracy, altitude, and altitude_accuracy to search an area.
-      # More info at: http://www.yelp.com/developers/documentation/v2/search_api#searchGC
+      # More info at: http://www.yelp.com/developers/documentation/v3/search_api#searchGC
       #
       # @param coordinates [Hash] a hash of latitude, longitude, accuracy,
       #   altitude, and altitude accuracy. Only latitude and longitude are required
       # @param params [Hash] a hash that corresponds to params on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#searchGP
+      #   http://www.yelp.com/developers/documentation/v3/search_api#searchGP
       # @param locale [Hash] a hash that corresponds to locale on the API:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#lParam
+      #   http://www.yelp.com/developers/documentation/v3/search_api#lParam
       # @return [Response::Search] a parsed object of the response. For a complete
       #   list of possible response values visit:
-      #   http://www.yelp.com/developers/documentation/v2/search_api#rValue
+      #   http://www.yelp.com/developers/documentation/v3/search_api#rValue
       #
       # @example Search for business with params and locale
       #   coordinates = { latitude: 37.786732,
