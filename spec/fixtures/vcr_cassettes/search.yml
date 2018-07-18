@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v2/search?location=San%20Francisco
+    uri: https://api.yelp.com/v3/search?location=San%20Francisco
     body:
       encoding: US-ASCII
       string: ''

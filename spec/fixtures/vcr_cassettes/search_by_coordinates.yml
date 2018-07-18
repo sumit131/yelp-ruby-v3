@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v2/search?ll=37.7577,-122.4376,,,
+    uri: https://api.yelp.com/v3/search?ll=37.7577,-122.4376,,,
     body:
       encoding: US-ASCII
       string: ''

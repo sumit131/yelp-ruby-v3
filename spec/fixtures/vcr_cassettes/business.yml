@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yelp.com/v2/business/yelp-san-francisco
+    uri: https://api.yelp.com/v3/business/yelp-san-francisco
     body:
       encoding: US-ASCII
       string: ''
